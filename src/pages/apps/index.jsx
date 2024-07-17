@@ -1,11 +1,14 @@
 
-import './App.css';
+import './index.css';
 
 export default function App() {
   return (
     <div className="App">
 
-     <h1>ESTUDOS DE REACTJS</h1>
+     <h1>Estudos reactJS
+     <i className='fa fa-heart'></i>
+     </h1>
+  
      
     </div>
   );

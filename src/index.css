@@ -1,5 +1,8 @@
-body {
-  margin: 0;
-  font-family:'Roboto'
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+PE:wght@100..400&display=swap');
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family:"Playwrite PE", cursive;
    
 }
