@@ -1,4 +1,8 @@
 .App {
-  text-align: right;
+  text-align: left;
+  margin: 20px;
 }
 
+h1:hover{
+  color: #a8590f;
+}
