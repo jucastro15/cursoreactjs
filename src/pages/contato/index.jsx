@@ -11,7 +11,7 @@ export default function Contato(){
             </Link>
             
              <h1>Contato</h1>
-            <img className='icone' src="/assets/image/contato.png" />
+            <img className='icone' src="/assets/image/contato.png" alt="contato"  />
  
         </div>
     )
