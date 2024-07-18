@@ -16,6 +16,7 @@ export default function Contato() {
 
             </header>
             <section className='seçao' >
+                <h1>Entrem em contato</h1>
                 <img className='icone' src="/assets/image/contato.png" alt="contato" />
             </section>
 
