@@ -1,0 +1,26 @@
+.pagina-eventos {
+    .cabeçalho {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+
+        .voltar {
+            font-size: 22px;
+        }
+    }
+
+    .seçao {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .grupo{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    
+    }
+}

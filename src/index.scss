@@ -15,6 +15,7 @@ a,a:visited{
 }
 
 .pagina {
+  
 
   background-color: #F5F6FA;
   min-height: 100vh;
@@ -54,7 +55,11 @@ a,a:visited{
       color: #606060;
 
     }
-
+   
+    input[type=checkbox], input[type=radio] {
+      width: auto;
+  }
+  
 
     button {
       background-color: #0084f0;
@@ -65,5 +70,6 @@ a,a:visited{
       padding: 10px 30px;
       outline: none;
     }
+    
   }
 }

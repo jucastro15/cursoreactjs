@@ -19,7 +19,13 @@ export default function App() {
       
         <ul>
           <li>
-            <Link to='/contato'>ir para contato</Link>
+            <Link to='/contato'>ir para Contato</Link>
+          </li>
+          <li>
+          <Link to='/eventos'>ir para Eventos</Link>
+          </li>
+          <li>
+            <Link to='/varestado'>Ir para Variaveis de Estado</Link>
           </li>
         </ul>
       

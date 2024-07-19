@@ -1,0 +1,84 @@
+.pagina-varestado {
+
+    .cabeçalho {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        .voltar {
+            font-size: 22px;
+        }
+    }
+
+    .seçao {
+        .cont {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font: 700 28px "Poppins";
+
+        }
+
+        button:hover {
+            background-color: rgb(4, 3, 65);
+        }
+
+
+        .calculadora {
+            .entrada {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+        
+                input {
+                    width: 150px;
+                }
+        
+                .res {
+                    border: 2px dashed;
+                    width: 150px;
+                    font: 500 28px 'Poppins';
+                    padding: 2px;
+                    text-align: center;
+                }
+        
+                button {
+                    width: 150px;
+                }
+            }
+        }
+        
+
+        .ingressos {
+            .entrada {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: start;
+                justify-content: start;
+           
+
+                &>div {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    label {
+                        width: 200px;
+                        text-align: right;
+                    }
+
+                    input[type=text ] {
+                       min-width: auto;
+                       width: 200px;
+                    }
+                    button{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+    }
+}
