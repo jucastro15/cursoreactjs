@@ -14,6 +14,7 @@ export default function VarEstado() {
     const [tituloS5, setTituloS5] = useState('Digite algo')
     const [descriçaoS5, setDescriçaoS5] = useState('Digite algo')
 
+
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
     const [res, setRes] = useState(0)
@@ -22,6 +23,10 @@ export default function VarEstado() {
     const [meioIng, setMeioIng] = useState(0)
     const [totalIng, setTotalIng] = useState(0)
     const [cupom, setCupom] = useState('')
+
+    const [metas, setMetas] = useState('')
+    const [listaMetas, setListametas] = useState([])
+    const [editando, setEditando] = useState(-1)
 
     function aumentar() {
 
@@ -46,6 +51,42 @@ export default function VarEstado() {
         setTotalIng(tot)
     }
 
+    function adicionarMeta() {
+
+        if (metas !== '') {
+            if (editando == -1) {
+                setListametas([...listaMetas, metas])
+                setMetas('')
+            }
+            else {
+                listaMetas[editando] = metas
+                setListametas([...listaMetas])
+                setMetas('');
+                setEditando(-1);
+            }
+        }
+
+
+    }
+    function teclaApertada(e) {
+        if (e.key === 'Enter') {
+            adicionarMeta();
+        }
+    }
+    function removerMeta(pos) {
+
+        listaMetas.splice(pos, 1);
+        setListametas([...listaMetas]);
+        alert(`Estou removendo o ${pos + 1}º item`)
+
+    }
+    function alterarMeta(pos) {
+        setMetas(listaMetas[pos])
+        setEditando(pos)
+
+    }
+
+
 
 
 
@@ -63,16 +104,24 @@ export default function VarEstado() {
 
             <div className='seçao'>
                 <div className='metas'>
-                    <h1>Metas par os proximos 5 anos</h1>
+                    <h1>Metas para os proximos 5 anos</h1>
 
-                    <div>
-                        <input type="text" placeholder='Digite sua meta aqui' />
-                        <button>Adicionar</button>
+                    <div className='entrada'>
+                        <input type="text" placeholder='Digite sua meta aqui' onKeyUp={teclaApertada} value={metas} onChange={e => setMetas(e.target.value)} />
+                        <button onClick={adicionarMeta}>Adicionar</button>
                     </div>
 
-                    <ul>
-                        <li>Se tornar pleno em uma empresa</li>
-                        <li>Dar entrada no meu carro</li>
+
+                    <ul className='entrada'>
+                        {listaMetas.map((item, pos) =>
+                            <li key={pos}>
+                                <i className="fa-regular fa-pen-to-square" onClick={() => alterarMeta(pos)}></i>&nbsp;
+                                <i className="fa-solid fa-trash-can" onClick={() => removerMeta(pos)}></i> &nbsp;
+                                {item}
+                            </li>
+
+                        )}
+
                     </ul>
 
                 </div>
@@ -108,7 +157,6 @@ export default function VarEstado() {
                     </div>
                 </div>
             </div>
-
 
             <div className='seçao '>
                 <div className='calculadora'>
