@@ -28,6 +28,16 @@ export default function VarEstado() {
     const [listaMetas, setListametas] = useState([])
     const [editando, setEditando] = useState(-1)
 
+    const [plano, setPlano] = useState('')
+    const [situação, setSituação] = useState('')
+    const [cor, setCor] = useState('')
+    const [listaPlanos, setListaPlanos] = useState([])
+
+  
+
+
+
+
     function aumentar() {
 
         if (contador < 10) {
@@ -45,6 +55,7 @@ export default function VarEstado() {
         let somar = lerNumero(num1) + lerNumero(num2)
         setRes(somar)
     }
+    
     function calcularingresso() {
 
         let tot = calcularTotalingresso(meioIng, qtdIng, cupom)
@@ -54,7 +65,7 @@ export default function VarEstado() {
     function adicionarMeta() {
 
         if (metas !== '') {
-            if (editando == -1) {
+            if (editando === -1) {
                 setListametas([...listaMetas, metas])
                 setMetas('')
             }
@@ -78,7 +89,6 @@ export default function VarEstado() {
         listaMetas.splice(pos, 1);
         setListametas([...listaMetas]);
         alert(`Estou removendo o ${pos + 1}º item`)
-
     }
     function alterarMeta(pos) {
         setMetas(listaMetas[pos])
@@ -86,6 +96,18 @@ export default function VarEstado() {
 
     }
 
+    function adicionarPlano(){
+        let novoPlano = {
+            titulo: plano,
+            tempo: situação,
+            tema: cor
+        }
+
+        setListaPlanos([...listaPlanos, novoPlano])
+        setCor('')
+        setPlano('')
+        setSituação('')
+    }
 
 
 
@@ -101,6 +123,35 @@ export default function VarEstado() {
                 <h1>React-Js | Variavel de Estado </h1>
 
             </header>
+
+            <div className='seçao'>
+                <div className='planos'>
+                    <h1>Meus Planos atuais</h1>
+                    <div className='entrada'>
+                        <input type="text" placeholder='Meu plano aqui' value={plano} onChange={e=>setPlano(e.target.value)}/>
+                        <input type="text" placeholder='Situação do plano aqui' value={situação} onChange={e=>setSituação(e.target.value)}/>
+                        <input type="text" placeholder='Cor da identificacao' value={cor} onChange={e=>setCor(e.target.value)}/>
+                        <button onClick={adicionarPlano}>Adicionar plano</button>
+                    </div>
+
+                    <div className='lista'>
+                        {
+                            listaPlanos.map(item =>
+                                <div className='plano'>
+                            <div className='cor' style={{backgroundColor: item.tema}}> &nbsp;</div>
+                            <div>
+                            <h1> {item.titulo} </h1>
+                            <h2> {item.tempo} </h2>  
+                            </div>
+                            
+                        </div>
+                        )}
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
 
             <div className='seçao'>
                 <div className='metas'>
@@ -161,8 +212,6 @@ export default function VarEstado() {
             <div className='seçao '>
                 <div className='calculadora'>
                     <h1>Calculadora</h1>
-
-
                     <div className='entrada'>
                         <input type="text" value={num1} onChange={e => setNum1(e.target.value)} />
                         <input type="text" value={num2} onChange={e => setNum2(e.target.value)} />
@@ -172,7 +221,8 @@ export default function VarEstado() {
                         <div className='res'>
                             {res}
                         </div>
-                        <button onClick={somar}> Soma</button>
+                        <button onClick={somar}> Soma</button> 
+                      
                     </div>
                 </div>
             </div>
