@@ -40,13 +40,13 @@ export default function VarEstado() {
 
     function aumentar() {
 
-        if (contador < 10) {
+        if (contador <= 10) {
             setContador(contador + 1)
         }
 
     } function diminuir() {
 
-        if (contador > 0) {
+        if (contador >= 0) {
             setContador(contador - 1)
         }
 
@@ -136,8 +136,8 @@ export default function VarEstado() {
 
                     <div className='lista'>
                         {
-                            listaPlanos.map(item =>
-                                <div className='plano'>
+                            listaPlanos.map((item, pos) =>
+                                <div className='plano' key={pos}>
                             <div className='cor' style={{backgroundColor: item.tema}}> &nbsp;</div>
                             <div>
                             <h1> {item.titulo} </h1>
