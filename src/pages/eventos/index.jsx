@@ -1,5 +1,5 @@
 import './index.scss'
-import { Link } from 'react-router-dom';
+import Cabecalho from '../../components/cabeçalho';
 
 
 export default function Eventos() {
@@ -22,15 +22,8 @@ export default function Eventos() {
 
     return (
         <div className='pagina-eventos pagina'>
-            <header className='cabeçalho' >
-
-                <Link to='/'>
-                    <i className='fa fa-arrow-left voltar'></i>
-                </Link>
-
-                <h1>React-Js | Eventos </h1>
-            </header>
-
+          <Cabecalho titulo ='ReactJS | Eventos'/>
+            
             <section className='seçao' >
                 <h1>Entendendo eventos</h1>
 

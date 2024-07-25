@@ -1,5 +1,5 @@
 import './index.scss'
-import { Link } from 'react-router-dom';
+import Cabecalho from '../../components/cabeçalho';
 
 export default function Contato() {
 
@@ -7,14 +7,8 @@ export default function Contato() {
     return (
         <div className='pagina-contato pagina'>
 
-            <header className='cabeçalho' >
-                <Link to='/'>
-                    <i className='fa fa-arrow-left voltar'></i>
-                </Link>
-
-                <h1>Contato</h1>
-
-            </header>
+         
+         <Cabecalho titulo ='ReactJS | Contato '/>
             <section className='seçao' >
                 <h1>Entrem em contato</h1>
                 <img className='icone' src="/assets/image/contato.png" alt="contato" />

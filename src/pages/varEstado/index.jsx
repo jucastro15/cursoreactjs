@@ -1,9 +1,8 @@
 import './index.scss';
-import { Link } from 'react-router-dom';
 import { lerNumero } from '../../utils/converçao';
 import { calcularTotalingresso } from '../../service/ingressos';
 import { useState } from 'react';
-
+import Cabecalho from '../../components/cabeçalho';
 
 export default function VarEstado() {
 
@@ -33,7 +32,7 @@ export default function VarEstado() {
     const [cor, setCor] = useState('')
     const [listaPlanos, setListaPlanos] = useState([])
 
-  
+
 
 
 
@@ -55,7 +54,7 @@ export default function VarEstado() {
         let somar = lerNumero(num1) + lerNumero(num2)
         setRes(somar)
     }
-    
+
     function calcularingresso() {
 
         let tot = calcularTotalingresso(meioIng, qtdIng, cupom)
@@ -96,7 +95,7 @@ export default function VarEstado() {
 
     }
 
-    function adicionarPlano(){
+    function adicionarPlano() {
         let novoPlano = {
             titulo: plano,
             tempo: situação,
@@ -114,23 +113,15 @@ export default function VarEstado() {
 
     return (
         <div className='pagina-varestado pagina'>
-
-            <header className='cabeçalho'>
-
-                <Link to='/'>
-                    <i className='fa fa-arrow-left voltar'></i>
-                </Link>
-                <h1>React-Js | Variavel de Estado </h1>
-
-            </header>
+            <Cabecalho titulo ='ReactJS | Variaveis de Estado' />
 
             <div className='seçao'>
                 <div className='planos'>
                     <h1>Meus Planos atuais</h1>
                     <div className='entrada'>
-                        <input type="text" placeholder='Meu plano aqui' value={plano} onChange={e=>setPlano(e.target.value)}/>
-                        <input type="text" placeholder='Situação do plano aqui' value={situação} onChange={e=>setSituação(e.target.value)}/>
-                        <input type="text" placeholder='Cor da identificacao' value={cor} onChange={e=>setCor(e.target.value)}/>
+                        <input type="text" placeholder='Meu plano aqui' value={plano} onChange={e => setPlano(e.target.value)} />
+                        <input type="text" placeholder='Situação do plano aqui' value={situação} onChange={e => setSituação(e.target.value)} />
+                        <input type="text" placeholder='Cor da identificacao' value={cor} onChange={e => setCor(e.target.value)} />
                         <button onClick={adicionarPlano}>Adicionar plano</button>
                     </div>
 
@@ -138,16 +129,16 @@ export default function VarEstado() {
                         {
                             listaPlanos.map((item, pos) =>
                                 <div className='plano' key={pos}>
-                            <div className='cor' style={{backgroundColor: item.tema}}> &nbsp;</div>
-                            <div>
-                            <h1> {item.titulo} </h1>
-                            <h2> {item.tempo} </h2>  
-                            </div>
-                            
-                        </div>
-                        )}
-                        
-                        
+                                    <div className='cor' style={{ backgroundColor: item.tema }}> &nbsp;</div>
+                                    <div>
+                                        <h1> {item.titulo} </h1>
+                                        <h2> {item.tempo} </h2>
+                                    </div>
+
+                                </div>
+                            )}
+
+
                     </div>
 
                 </div>
@@ -221,8 +212,8 @@ export default function VarEstado() {
                         <div className='res'>
                             {res}
                         </div>
-                        <button onClick={somar}> Soma</button> 
-                      
+                        <button onClick={somar}> Soma</button>
+
                     </div>
                 </div>
             </div>
