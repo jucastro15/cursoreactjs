@@ -118,7 +118,7 @@ export default function Comps() {
                             listaPlanos.map((item, pos) =>
                                
                                     <ItemPlano
-                                        item={ {
+                                        item={{
                                           titulo: 'LEGAL',
                                             tempo: 'TRISTE',
                                             tema: 'red'  
