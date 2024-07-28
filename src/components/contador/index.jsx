@@ -14,19 +14,22 @@ export default function Contador(props) {
 
     } function diminuir() {
 
-        if (contador >= (props.inicio ?? 0 )) {
+        if (contador >= (props.inicio ?? 0)) {
             setContador(contador - 1)
         }
     }
 
     return (
         <div className='comp-contador'>
+
             <h1>{props.titulo ?? 'Contador'}</h1>
             <div className="cont">
                 <button onClick={aumentar} >+</button>
                 {contador}
                 <button onClick={diminuir}  >-</button>
             </div>
+
+
 
         </div>
     )
