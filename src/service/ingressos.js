@@ -6,7 +6,7 @@ export function calcularTotalingresso(meio,qtd,cupom) {
     else{
         tot = qtd * 30.00;
     }
-    if(cupom == 'QUERO50'){
+    if(cupom === 'QUERO50'){
         let desc = tot * 50 /100 ;
         tot = tot - desc
 
