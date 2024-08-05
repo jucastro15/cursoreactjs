@@ -25,4 +25,36 @@
         }
 
     }
+
+
+
+    .filmes{
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      
+      
+      .entradas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+          
+            width: 27%;
+        
+          }
+      }
+          
+          .lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+    }
+
+
+
+
 }
