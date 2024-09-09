@@ -102,9 +102,9 @@ export default function Comps() {
                 <div className="filmes">
                     <h1>Catálogo de Filmes</h1>
                     <div className="entradas">
-                        <input placeholder="Nome do filme" value={nome} onChange={e => setNome(e.target.value)} />
-                        <input placeholder="Classificação" value={classificacao} onChange={e => setClassificacao(e.target.value)} />
-                        <input placeholder="URL da capa do filme" value={url} onChange={e => setUrl(e.target.value)} />
+                        <input type='text' placeholder="Nome do filme" value={nome} onChange={e => setNome(e.target.value)} />
+                        <input type='text' placeholder="Classificação" value={classificacao} onChange={e => setClassificacao(e.target.value)} />
+                        <input type='text' placeholder="URL da capa do filme" value={url} onChange={e => setUrl(e.target.value)} />
                         <button onClick={novoFilme}>Adicionar</button>
                     </div>
                     <div className="lista">

@@ -1,52 +1,69 @@
 .comp-cartao-filme {
-   .cartao {
-     padding: 15px;
-     box-shadow: 0px -10px 15px #d6d5d5;
-     border-radius: 15px;
-     position: relative;
- 
-     img {
-       width: 200px;
-     }
- 
-     .informacoes {
-       p {
-         font: 500 20px 'Poppins';
-         text-align: center;
-       }
-     }
- 
-     .classificacao {
-       justify-content: center;
-       align-items: center;
-       display: flex;
-       position: absolute;
-       top: 25px;
-       left: 25px;
-       padding: 4px 10px;
-       border-radius: 5px;
-       color: #fff;
-       font: 500 20px 'Poppins';
- 
+  .cartao {
+    padding: 15px;
+    box-shadow: 0px -10px 15px #d6d5d5;
+    border-radius: 15px;
+    position: relative;
+    font: 500 20px 'Poppins';
+    text-align: center;
+
+    img {
+      width: 200px;
+    }
+
+    .informacoes {
+      padding: 7px 10px;
+      border-radius: 100px;
+      background-color: black;
+      color: #fff;
+      font: 500 18px 'Poppins';
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+
+      .calendar {
+        color: #fc2424;
+      }
+
+    }
+
+    .classificacao {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      padding: 4px 12px;
+      border-radius: 5px;
+      color: #fff;
+      font: 500 20px 'Poppins';
+
       &.c-l {
-         background-color: rgb(14, 168, 14);
-       }
+        background-color: rgb(14, 168, 14);
+      }
+
       &.c-10 {
-         background-color: rgb(89, 151, 233);
-       }
+        background-color: rgb(89, 151, 233);
+      }
+
       &.c-12 {
-         background-color: rgb(255, 255, 85);
-       }
+        background-color: rgb(255, 255, 85);
+      }
+
       &.c-14 {
-         background-color: rgb(255, 184, 53);
-       }
+        background-color: rgb(255, 184, 53);
+      }
+
       &.c-16 {
-         background-color: rgb(248, 26, 26);
-       }
+        background-color: rgb(248, 26, 26);
+      }
+
       &.c-18 {
-         background-color: #000;
-       }
-     }
-   }
- }
- 
+        background-color: #000;
+      }
+    }
+  }
+}
