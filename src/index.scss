@@ -30,11 +30,11 @@ a,a:visited{
     margin: 40px 60px;
     border-radius: 5px;
     max-width: 1000px;
-    font: 400 20px "Poppins";
+    font: 400 18px "Poppins";
 
     h1 {
       color: #404040;
-      margin-bottom: 20px;
+      margin-bottom: 27px;
     }
 
     input,select {
@@ -54,10 +54,11 @@ a,a:visited{
   
 
     button {
+      cursor: pointer;
       background-color: #0084f0;
       font: 500 20px "Poppins";
       color: #ffffff;
-      border: 1px solid #000000;
+      border: 1px solid #363636b4;
       border-radius: 5px;
       padding: 10px 30px;
       outline: none;
