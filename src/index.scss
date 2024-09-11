@@ -6,7 +6,6 @@
   font-family: "Roboto";
   font-weight: 500;
 
-
 }
 
 a,a:visited{
@@ -30,11 +29,12 @@ a,a:visited{
     margin: 40px 60px;
     border-radius: 5px;
     max-width: 1000px;
-    font: 400 18px "Poppins";
+    font: 400 20px "Poppins";
 
     h1 {
       color: #404040;
       margin-bottom: 27px;
+      font: 500 26px "Poppins";
     }
 
     input,select {

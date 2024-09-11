@@ -1,0 +1,50 @@
+.pagina-efeitos {
+
+    .seçao {
+        h1 {
+            font: 500 25px 'Poppins';
+        }
+
+        .situ-aluno {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font: 500 18px 'Poppins';
+            color: rgb(63, 62, 62);
+
+            input {
+                min-width: auto;
+                width: 55px;
+                text-align: center;
+            }
+        }
+
+
+        .notas-aluno {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input{
+                min-width: auto;
+                width: 55px;
+            }
+
+            .entrada{
+                display: flex;
+                gap: 20px;
+            }
+
+            .media, .situacao {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 10px;
+                border: 1px dashed #000;
+                div{
+                    font: 600 18px 'Poppins';
+                }
+            }
+        }
+    }
+}
