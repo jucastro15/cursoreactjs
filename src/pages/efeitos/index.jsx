@@ -11,6 +11,7 @@ export default function Efeitos() {
     const [n2, setN2] = useState(0)
     const [n3, setN3] = useState(0)
     const [media, setMedia] = useState(0)
+    const [situacao, setSituacao] = useState("--");
 
       useEffect(() => {
         AvaliarMencao();
@@ -34,7 +35,7 @@ export default function Efeitos() {
         s = 'DP'
      }
      
-     setSituação(s)
+     setSituacao(s)
 
     }
 
@@ -101,7 +102,7 @@ export default function Efeitos() {
                     </div>
                     <div className='situacao'>
                         <label>Situação:</label>
-                        <div>{situação}</div>
+                        <div>{situacao}</div>
                     </div>
 
                 </div>
